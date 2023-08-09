@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objednávkový formulář</title>
+    <script src="./script.js">
+        
+    </script>
+</head>
+<body>
+    <h1>Objednávkový formulář pro nákup letenek</h1>
+    <form>
+        <label for="city">Město:</label>
+        <select id="city">
+            <option value="Praha">Praha 500 Kč</option>
+            <option value="Frankfurt">Frankfurt 3000 Kč</option>
+            <option value="New York">New York 15000 Kč</option>
+            <option value="Sydney">Sydney 30000 Kč</option>
+        </select>
+        <br>
+        
+        <label for="numTickets">Počet letenek:</label>
+        <select id="numTickets">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br>
+        
+        <label for="returnFlight">Zpáteční letenka</label>
+        <input type="checkbox" id="returnFlight" name="returnFlight">
+        <br>
+        
+        <label>Třída:</label>
+        <input type="radio" id="economy" name="class" value="economy" checked>
+        <label for="economy">Economy class</label>
+        <input type="radio" id="business" name="class" value="business">
+        <label for="business">Business class</label>
+        <input type="radio" id="royal" name="class" value="royal">
+        <label for="royal">Royal class</label>
+        <br>
+        
+        <label for="totalPrice">Celková cena letenek:</label>
+        <span id="totalPrice">0 Kč</span>
+        <br>
+        
+        <label for="customerBudget">Vaše finanční prostředky:</label>
+        <input type="number" id="customerBudget">
+        <button type="button" onclick="calculatePrice()">Vypočítat</button>
+        <br>
+        
+        <p id="resultMessage"></p>
+        
+        <label for="note">Poznámka:</label>
+        <textarea id="note" rows="10" cols="40" placeholder="Zde napište svou poznámku" oninput="validateTextarea(this)"></textarea>
+        <br>
+        <br>
+        
+        <button type="submit">Odeslat</button>
+    </form>
+</body>
+</html>
